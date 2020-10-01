@@ -49,11 +49,9 @@ def main():
         time.sleep(sleep_time)
         set_reverse_diagonal()
         time.sleep(sleep_time)
-        if codebug.get_input('A') == 1:
-            if (sleep_time - SLEEP_TIME_STEP) >= SLEEP_TIME_MIN:
+        if codebug.get_input('A') == 1 and (sleep_time - SLEEP_TIME_STEP) >= SLEEP_TIME_MIN:
                 sleep_time -= SLEEP_TIME_STEP
-        if codebug.get_input('B') == 1:
-            if (sleep_time + SLEEP_TIME_STEP) <= SLEEP_TIME_MAX:
+        if codebug.get_input('B') == 1 and (sleep_time + SLEEP_TIME_STEP) <= SLEEP_TIME_MAX:
                 sleep_time += SLEEP_TIME_STEP
 
 
